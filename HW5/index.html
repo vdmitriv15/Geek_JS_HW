@@ -1,0 +1,36 @@
+<!--
+1. Создать функцию, генерирующую шахматную доску. Можно использовать любые html-теги.
+Доска должна быть верно разлинована на черные и белые ячейки.
+Строки должны нумероваться числами от 1 до 8, столбцы — латинскими буквами A, B, C, D, E, F, G, H.-->
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container" id="cont">
+    <script>
+        let x = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+        document.write("<table border='1' width='500' height='500'>");
+        for(let i=1; i<=9; i++) {
+            document.write("<tr>");
+            for(let j=1; j<=9; j++) {
+                if((i+j)%2!=0) {
+                    document.write("<td bgcolor='white'></td>");
+                }
+                else {
+                    document.write("<td bgcolor='black'></td>");
+                }
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</div>
+</body>
+</html>
